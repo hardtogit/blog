@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans	http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<!-- scan @components in service or dao -->
+	<context:component-scan base-package="com.thon.service"/>
+	
+	<bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+	    <property name="securityManager" ref="securityManager" />
+		<property name="loginUrl" value="/login" />
+		<property name="successUrl" value="/login" />
+		<property name="unauthorizedUrl" value="/login" />
+		<property name="filters">
+		    <map>
+				<entry key="authc" value-ref="formAuthenticationFilter"/>
+	            <entry key="roles" value-ref="anyRolesAuthorizationFilter"/>
+	        </map>
+		</property>
+		<property name="filterChainDefinitions">
+			<value>
+				/login = authc
+				/logout = logout
+				/assets/** = anon
+				/api/** = anon
+				/regist = anon
+				/bill/d/** = anon
+				/regist/** = anon
+				/admin/** = roles[admin]
+				/** = roles[user]
+			</value>
+		</property>
+	</bean>
+	
+	<bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
+	    <property name="sessionManager" ref="sessionManager" />  
+	    <property name="realm" ref="shiroDbRealm"/>
+	</bean>
+	
+	<bean id="sessionDAO" class="org.apache.shiro.session.mgt.eis.MemorySessionDAO" />
+	<bean id="sessionManager" class="org.apache.shiro.web.session.mgt.DefaultWebSessionManager">  
+        <property name="sessionDAO" ref="sessionDAO" />  
+    </bean> 
+	
+	<!-- 保证实现了Shiro内部lifecycle函数的bean执行 -->
+	<bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor"/>
+	
+	<bean id="shiroDbRealm" class="com.thon.security.ShiroDbRealm"/>
+	
+	<bean id="formAuthenticationFilter" class="com.thon.security.CaptchaFormAuthenticationFilter"/>
+	<bean id="anyRolesAuthorizationFilter" class="com.thon.security.AnyRolesAuthorizationFilter"/> 
+</beans>

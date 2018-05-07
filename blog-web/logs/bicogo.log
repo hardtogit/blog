@@ -1,0 +1,201 @@
+2018-05-02 18:13:14,907 [main] INFO  [org.hibernate.annotations.common.Version] - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+2018-05-02 18:13:14,912 [main] INFO  [org.hibernate.Version] - HHH000412: Hibernate Core {4.2.8.Final}
+2018-05-02 18:13:14,914 [main] INFO  [org.hibernate.cfg.Environment] - HHH000206: hibernate.properties not found
+2018-05-02 18:13:14,915 [main] INFO  [org.hibernate.cfg.Environment] - HHH000021: Bytecode provider name : javassist
+2018-05-02 18:13:14,935 [main] INFO  [org.hibernate.ejb.Ejb3Configuration] - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-05-02 18:13:15,033 [main] INFO  [org.hibernate.service.jdbc.connections.internal.ConnectionProviderInitiator] - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2018-05-02 18:13:15,492 [main] WARN  [org.hibernate.engine.jdbc.internal.JdbcServicesImpl] - HHH000342: Could not obtain connection to query metadata : Access denied for user 'root'@'localhost' (using password: YES)
+2018-05-02 18:13:15,503 [main] ERROR [org.springframework.web.context.ContextLoader] - Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'shiroFilter' defined in URL [jar:file:/C:/Users/Administrator.PC-201803091616/.m2/repository/com/thon/blog-security/0.0.1/blog-security-0.0.1.jar!/applicationContext-shiro.xml]: Cannot resolve reference to bean 'securityManager' while setting bean property 'securityManager'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'securityManager' defined in URL [jar:file:/C:/Users/Administrator.PC-201803091616/.m2/repository/com/thon/blog-security/0.0.1/blog-security-0.0.1.jar!/applicationContext-shiro.xml]: Cannot resolve reference to bean 'shiroDbRealm' while setting bean property 'realm'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'shiroDbRealm': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.thon.service.system.SystemService com.thon.security.ShiroDbRealm.systemService; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'systemService': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.thon.dao.system.UserDao com.thon.service.system.SystemService.userDao; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userDaoImpl': Injection of persistence dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in URL [jar:file:/C:/Users/Administrator.PC-201803091616/.m2/repository/com/thon/blog-dao/0.0.1/blog-dao-0.0.1.jar!/applicationContext-dao.xml]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build EntityManagerFactory
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:329)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:107)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1417)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1158)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:296)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:198)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:753)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:464)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:389)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:294)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:112)
+	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:746)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:238)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1240)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:689)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:482)
+	at org.mortbay.jetty.plugin.JettyWebAppContext.doStart(JettyWebAppContext.java:256)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.server.handler.HandlerCollection.doStart(HandlerCollection.java:229)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.doStart(ContextHandlerCollection.java:172)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.server.handler.HandlerCollection.doStart(HandlerCollection.java:229)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:95)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:281)
+	at org.mortbay.jetty.plugin.JettyServer.doStart(JettyServer.java:65)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.mortbay.jetty.plugin.AbstractJettyMojo.startJetty(AbstractJettyMojo.java:520)
+	at org.mortbay.jetty.plugin.AbstractJettyMojo.execute(AbstractJettyMojo.java:365)
+	at org.mortbay.jetty.plugin.JettyRunMojo.execute(JettyRunMojo.java:521)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:134)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:207)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:116)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:80)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:51)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:307)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:193)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:106)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:863)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:288)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:199)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:289)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:229)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:415)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:356)
+	at org.codehaus.classworlds.Launcher.main(Launcher.java:47)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'securityManager' defined in URL [jar:file:/C:/Users/Administrator.PC-201803091616/.m2/repository/com/thon/blog-security/0.0.1/blog-security-0.0.1.jar!/applicationContext-shiro.xml]: Cannot resolve reference to bean 'shiroDbRealm' while setting bean property 'realm'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'shiroDbRealm': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.thon.service.system.SystemService com.thon.security.ShiroDbRealm.systemService; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'systemService': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.thon.dao.system.UserDao com.thon.service.system.SystemService.userDao; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userDaoImpl': Injection of persistence dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in URL [jar:file:/C:/Users/Administrator.PC-201803091616/.m2/repository/com/thon/blog-dao/0.0.1/blog-dao-0.0.1.jar!/applicationContext-dao.xml]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build EntityManagerFactory
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:329)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:107)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1417)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1158)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:296)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:323)
+	... 56 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'shiroDbRealm': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.thon.service.system.SystemService com.thon.security.ShiroDbRealm.systemService; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'systemService': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.thon.dao.system.UserDao com.thon.service.system.SystemService.userDao; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userDaoImpl': Injection of persistence dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in URL [jar:file:/C:/Users/Administrator.PC-201803091616/.m2/repository/com/thon/blog-dao/0.0.1/blog-dao-0.0.1.jar!/applicationContext-dao.xml]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build EntityManagerFactory
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:289)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1146)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:296)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:323)
+	... 66 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.thon.service.system.SystemService com.thon.security.ShiroDbRealm.systemService; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'systemService': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.thon.dao.system.UserDao com.thon.service.system.SystemService.userDao; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userDaoImpl': Injection of persistence dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in URL [jar:file:/C:/Users/Administrator.PC-201803091616/.m2/repository/com/thon/blog-dao/0.0.1/blog-dao-0.0.1.jar!/applicationContext-dao.xml]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build EntityManagerFactory
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:517)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:286)
+	... 74 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'systemService': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.thon.dao.system.UserDao com.thon.service.system.SystemService.userDao; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userDaoImpl': Injection of persistence dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in URL [jar:file:/C:/Users/Administrator.PC-201803091616/.m2/repository/com/thon/blog-dao/0.0.1/blog-dao-0.0.1.jar!/applicationContext-dao.xml]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build EntityManagerFactory
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:289)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1146)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:296)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:912)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:855)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:770)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:489)
+	... 76 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.thon.dao.system.UserDao com.thon.service.system.SystemService.userDao; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userDaoImpl': Injection of persistence dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in URL [jar:file:/C:/Users/Administrator.PC-201803091616/.m2/repository/com/thon/blog-dao/0.0.1/blog-dao-0.0.1.jar!/applicationContext-dao.xml]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build EntityManagerFactory
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:517)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:286)
+	... 87 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userDaoImpl': Injection of persistence dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in URL [jar:file:/C:/Users/Administrator.PC-201803091616/.m2/repository/com/thon/blog-dao/0.0.1/blog-dao-0.0.1.jar!/applicationContext-dao.xml]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build EntityManagerFactory
+	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor.postProcessPropertyValues(PersistenceAnnotationBeanPostProcessor.java:344)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1146)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:296)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:912)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:855)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:770)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:489)
+	... 89 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in URL [jar:file:/C:/Users/Administrator.PC-201803091616/.m2/repository/com/thon/blog-dao/0.0.1/blog-dao-0.0.1.jar!/applicationContext-dao.xml]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build EntityManagerFactory
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1512)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:296)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor.findDefaultEntityManagerFactory(PersistenceAnnotationBeanPostProcessor.java:534)
+	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor.findEntityManagerFactory(PersistenceAnnotationBeanPostProcessor.java:500)
+	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor$PersistenceElement.resolveEntityManager(PersistenceAnnotationBeanPostProcessor.java:663)
+	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor$PersistenceElement.getResourceToInject(PersistenceAnnotationBeanPostProcessor.java:634)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:150)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor.postProcessPropertyValues(PersistenceAnnotationBeanPostProcessor.java:341)
+	... 100 more
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build EntityManagerFactory
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:924)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:899)
+	at org.hibernate.ejb.HibernatePersistence.createContainerEntityManagerFactory(HibernatePersistence.java:76)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:288)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:310)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1571)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1509)
+	... 113 more
+Caused by: org.hibernate.HibernateException: Connection cannot be null when 'hibernate.dialect' not set
+	at org.hibernate.service.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:98)
+	at org.hibernate.service.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:68)
+	at org.hibernate.engine.jdbc.internal.JdbcServicesImpl.configure(JdbcServicesImpl.java:170)
+	at org.hibernate.service.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:76)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:160)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:132)
+	at org.hibernate.cfg.Configuration.buildTypeRegistrations(Configuration.java:1825)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1783)
+	at org.hibernate.ejb.EntityManagerFactoryImpl.<init>(EntityManagerFactoryImpl.java:96)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:914)
+	... 119 more
+2018-05-02 18:13:57,132 [main] INFO  [org.hibernate.annotations.common.Version] - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+2018-05-02 18:13:57,137 [main] INFO  [org.hibernate.Version] - HHH000412: Hibernate Core {4.2.8.Final}
+2018-05-02 18:13:57,139 [main] INFO  [org.hibernate.cfg.Environment] - HHH000206: hibernate.properties not found
+2018-05-02 18:13:57,140 [main] INFO  [org.hibernate.cfg.Environment] - HHH000021: Bytecode provider name : javassist
+2018-05-02 18:13:57,154 [main] INFO  [org.hibernate.ejb.Ejb3Configuration] - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-05-02 18:13:57,252 [main] INFO  [org.hibernate.service.jdbc.connections.internal.ConnectionProviderInitiator] - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2018-05-02 18:13:57,876 [main] INFO  [org.hibernate.dialect.Dialect] - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-05-02 18:13:58,025 [main] INFO  [org.hibernate.engine.transaction.internal.TransactionFactoryInitiator] - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2018-05-02 18:13:58,029 [main] INFO  [org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory] - HHH000397: Using ASTQueryTranslatorFactory
+2018-05-02 18:13:58,295 [main] INFO  [org.hibernate.cache.spi.UpdateTimestampsCache] - HHH000250: Starting update timestamps cache at region: org.hibernate.cache.spi.UpdateTimestampsCache
+2018-05-02 18:13:58,297 [main] WARN  [org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory] - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+2018-05-02 18:13:58,335 [main] INFO  [org.hibernate.cache.internal.StandardQueryCache] - HHH000248: Starting query cache at region: org.hibernate.cache.internal.StandardQueryCache
+2018-05-02 18:13:58,336 [main] WARN  [org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory] - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+2018-05-02 18:13:58,363 [main] INFO  [org.hibernate.validator.internal.util.Version] - HV000001: Hibernate Validator 4.3.1.Final
+2018-05-02 18:13:58,513 [main] WARN  [org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory] - HHH020003: Could not find a specific ehcache configuration for cache named [com.thon.entity.system.User]; using defaults.
+2018-05-02 18:13:58,575 [main] WARN  [org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory] - HHH020003: Could not find a specific ehcache configuration for cache named [com.thon.entity.post.Comment]; using defaults.
+2018-05-02 18:13:58,597 [main] WARN  [org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory] - HHH020003: Could not find a specific ehcache configuration for cache named [com.thon.entity.system.Role]; using defaults.
+2018-05-02 18:13:58,605 [main] WARN  [org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory] - HHH020003: Could not find a specific ehcache configuration for cache named [com.thon.entity.system.Attachment]; using defaults.
+2018-05-02 18:13:58,614 [main] WARN  [org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory] - HHH020003: Could not find a specific ehcache configuration for cache named [com.thon.entity.system.Log]; using defaults.
+2018-05-02 18:13:58,621 [main] WARN  [org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory] - HHH020003: Could not find a specific ehcache configuration for cache named [com.thon.entity.post.Term]; using defaults.
+2018-05-02 18:13:58,629 [main] WARN  [org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory] - HHH020003: Could not find a specific ehcache configuration for cache named [com.thon.entity.post.Post]; using defaults.
+2018-05-02 18:13:58,637 [main] WARN  [org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory] - HHH020003: Could not find a specific ehcache configuration for cache named [com.thon.entity.system.Office]; using defaults.
+2018-05-02 18:13:58,646 [main] WARN  [org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory] - HHH020003: Could not find a specific ehcache configuration for cache named [com.thon.entity.system.Dict]; using defaults.
+2018-05-02 18:13:58,654 [main] WARN  [org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory] - HHH020003: Could not find a specific ehcache configuration for cache named [com.thon.entity.system.Office.userList]; using defaults.
+2018-05-02 18:13:58,689 [main] WARN  [org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory] - HHH020003: Could not find a specific ehcache configuration for cache named [com.thon.entity.system.Office.childList]; using defaults.
+2018-05-02 18:13:58,695 [main] WARN  [org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory] - HHH020003: Could not find a specific ehcache configuration for cache named [com.thon.entity.post.Term.childList]; using defaults.
+2018-05-02 18:13:58,701 [main] WARN  [org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory] - HHH020003: Could not find a specific ehcache configuration for cache named [com.thon.entity.post.Term.postList]; using defaults.
+2018-05-02 18:16:55,080 [qtp6415554-36] WARN  [org.hibernate.hql.internal.ast.HqlSqlWalker] - [DEPRECATION] Encountered positional parameter near line 1, column 56.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+2018-05-02 18:16:55,081 [qtp6415554-36] WARN  [org.hibernate.hql.internal.ast.HqlSqlWalker] - [DEPRECATION] Encountered positional parameter near line 1, column 74.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+2018-05-02 18:16:55,178 [qtp6415554-40] WARN  [org.hibernate.hql.internal.ast.HqlSqlWalker] - [DEPRECATION] Encountered positional parameter near line 1, column 45.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+2018-05-02 18:16:55,179 [qtp6415554-40] WARN  [org.hibernate.hql.internal.ast.HqlSqlWalker] - [DEPRECATION] Encountered positional parameter near line 1, column 58.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+2018-05-02 18:16:55,179 [qtp6415554-40] WARN  [org.hibernate.hql.internal.ast.HqlSqlWalker] - [DEPRECATION] Encountered positional parameter near line 1, column 71.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.

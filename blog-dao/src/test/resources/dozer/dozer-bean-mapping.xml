@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings xmlns="http://dozer.sourceforge.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://dozer.sourceforge.net http://dozer.sourceforge.net/schema/beanmapping.xsd">
+
+	<configuration>
+		<stop-on-errors>true</stop-on-errors>
+		<date-format>yyyy-MM-dd HH:mm:ss</date-format>
+		<wildcard>true</wildcard>
+	</configuration>
+	<mapping>
+		<class-a>com.thon.entity.mould.MouldFloor</class-a>  
+        <class-b>com.thon.dto.util.FloorDTO</class-b>  
+		<field>
+			<a>floorTypeDict.value</a>
+			<b>floorTypeValue</b>
+		</field>
+		<field>
+			<a>floorTypeDict.label</a>
+			<b>floorTypeLabel</b>
+		</field>
+	</mapping>
+	<mapping>
+		<class-a>com.thon.entity.mould.MouldFloorDetail</class-a>  
+        <class-b>com.thon.dto.util.FloorDTO.FloorDetail</class-b>  
+		<field>
+			<a>process.unitTypeDict.label</a>
+			<b>unit</b>
+		</field>
+		<field>
+			<a>process.name</a>
+			<b>processName</b>
+		</field>
+		<field>
+			<a>process.label</a>
+			<b>processLabel</b>
+		</field>
+	</mapping>
+</mappings>

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<enunciate label="novaglobalapi" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:noNamespaceSchemaLocation="http://enunciate.codehaus.org/schemas/enunciate-1.28.xsd">
+
+    <api-classes>
+        <include pattern="com.thon.controller.*"/>
+    </api-classes>
+
+    <modules>
+        <docs docsDir="restapi" title="ALIS API" includeDefaultDownloads="true" includeExampleXml="false"
+              disableRestMountpoint="true" copyright="copyright" forceExampleJson="true">
+        </docs>
+    </modules>
+</enunciate>

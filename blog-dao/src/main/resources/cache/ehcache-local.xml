@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache updateCheck="false" name="defaultCache">
+
+	<diskStore path="java.io.tmpdir/buildings/ehcache/default" />
+
+	<!-- DefaultCache setting. -->
+	<defaultCache maxEntriesLocalHeap="1000" eternal="false" timeToIdleSeconds="300" timeToLiveSeconds="600"
+		overflowToDisk="true" maxEntriesLocalDisk="100000" />
+	
+    <cache name="SimplePageCachingFilter" maxElementsInMemory="1" eternal="false" overflowToDisk="true"
+    	timeToIdleSeconds="120" timeToLiveSeconds="120" memoryStoreEvictionPolicy="LFU"/>
+</ehcache>

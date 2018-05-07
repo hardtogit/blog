@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+        "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+
+    <definition name="layout" template="/WEB-INF/layouts/layout.jsp">
+        <put-attribute name="title" value="行云物料验收管理监控平台"/>
+        <put-attribute name="header" value="/WEB-INF/layouts/header.jsp"/>
+        <put-attribute name="l-content" value="/WEB-INF/layouts/l-content.jsp"/>
+        <put-attribute name="r-content" value="/WEB-INF/layouts/r-content.jsp"/>
+    </definition>
+
+    <definition name="simpleLayout" template="/WEB-INF/layouts/layout-simple.jsp">
+        <put-attribute name="header" value=""/>
+        <put-attribute name="content" value=""/>
+    </definition>
+
+    <definition name="postLayout" extends="layout">
+    </definition>
+
+    <definition name="adminLayout" template="/WEB-INF/layouts/main/layout-admin.jsp">
+        <put-attribute name="header" value="/WEB-INF/views/admin/header.jsp"/>
+        <put-attribute name="l-content" value="/WEB-INF/views/admin/sider.jsp"/>
+        <put-attribute name="r-content" value=""/>
+    </definition>
+
+    <!-- error settings -->
+    <definition name="error-generic" extends="simpleLayout">
+        <put-attribute name="r-content" value="/WEB-INF/views/error/generic.jsp"/>
+    </definition>
+
+    <!-- account settings -->
+    <definition name="login" extends="simpleLayout">
+        <put-attribute name="content" value="/WEB-INF/views/account/login.jsp"/>
+    </definition>
+    <definition name="regist" extends="simpleLayout">
+        <put-attribute name="content" value="/WEB-INF/views/account/regist.jsp"/>
+    </definition>
+    <definition name="regist-send" extends="simpleLayout">
+        <put-attribute name="content" value="/WEB-INF/views/account/regist-send.jsp"/>
+    </definition>
+    <definition name="regist-active" extends="simpleLayout">
+        <put-attribute name="content" value="/WEB-INF/views/account/regist-active.jsp"/>
+    </definition>
+    <definition name="forget" extends="simpleLayout">
+        <put-attribute name="content" value="/WEB-INF/views/account/forget.jsp"/>
+    </definition>
+    <definition name="forget-send" extends="simpleLayout">
+        <put-attribute name="content" value="/WEB-INF/views/account/forget-send.jsp"/>
+    </definition>
+    <definition name="forget-reset" extends="simpleLayout">
+        <put-attribute name="content" value="/WEB-INF/views/account/forget-reset.jsp"/>
+    </definition>
+
+    <!-- post settings -->
+    <definition name="posts" extends="postLayout">
+        <put-attribute name="l-content" value="/WEB-INF/views/post/posts.jsp"/>
+    </definition>
+    <definition name="post" extends="postLayout">
+        <put-attribute name="l-content" value="/WEB-INF/views/post/post.jsp"/>
+    </definition>
+
+    <definition name="bill-sum" extends="layout">
+        <put-attribute name="l-content" value="/WEB-INF/views/bill/sider.jsp"/>
+        <put-attribute name="r-content" value="/WEB-INF/views/bill/sum.jsp"/>
+    </definition>
+    <definition name="bill-search" extends="layout">
+        <put-attribute name="l-content" value="/WEB-INF/views/bill/sider.jsp"/>
+        <put-attribute name="r-content" value="/WEB-INF/views/bill/search.jsp"/>
+    </definition>
+    <definition name="bill" extends="simpleLayout">
+        <put-attribute name="content" value="/WEB-INF/views/bill/bill.jsp"/>
+    </definition>
+
+    <!-- admin settings -->
+    <definition name="admin" extends="adminLayout">
+        <put-attribute name="r-content" value="/WEB-INF/views/admin/admin.jsp"/>
+    </definition>
+    <definition name="admin-post-manage" extends="adminLayout">
+        <put-attribute name="r-content" value="/WEB-INF/views/admin/post-manage.jsp"/>
+    </definition>
+    <definition name="admin-post-form" extends="adminLayout">
+        <put-attribute name="r-content" value="/WEB-INF/views/admin/post-form.jsp"/>
+    </definition>
+    <definition name="admin-post-category" extends="adminLayout">
+        <put-attribute name="r-content" value="/WEB-INF/views/admin/post-category.jsp"/>
+    </definition>
+    <definition name="admin-post-tags" extends="adminLayout">
+        <put-attribute name="r-content" value="/WEB-INF/views/admin/post-tags.jsp"/>
+    </definition>
+    <definition name="admin-user-manage" extends="adminLayout">
+        <put-attribute name="r-content" value="/WEB-INF/views/admin/user-manage.jsp"/>
+    </definition>
+    <definition name="admin-user-form" extends="adminLayout">
+        <put-attribute name="r-content" value="/WEB-INF/views/admin/user-form.jsp"/>
+    </definition>
+    <definition name="admin-profile" extends="adminLayout">
+        <put-attribute name="r-content" value="/WEB-INF/views/admin/profile.jsp"/>
+    </definition>
+    <definition name="admin-office-form" extends="adminLayout">
+        <put-attribute name="r-content" value="/WEB-INF/views/admin/office-form.jsp"/>
+    </definition>
+    <definition name="admin-office-manage" extends="adminLayout">
+        <put-attribute name="r-content" value="/WEB-INF/views/admin/office-manage.jsp"/>
+    </definition>
+    <definition name="admin-dict-form" extends="adminLayout">
+        <put-attribute name="r-content" value="/WEB-INF/views/admin/dict-form.jsp"/>
+    </definition>
+    <definition name="admin-dict-manage" extends="adminLayout">
+        <put-attribute name="r-content" value="/WEB-INF/views/admin/dict-manage.jsp"/>
+    </definition>
+    <definition name="admin-bill-manage" extends="adminLayout">
+        <put-attribute name="r-content" value="/WEB-INF/views/admin/bill-manage.jsp"/>
+    </definition>
+
+</tiles-definitions>
